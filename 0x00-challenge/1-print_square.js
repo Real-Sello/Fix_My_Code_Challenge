@@ -14,11 +14,11 @@ if (process.argv.length <= 2) {
     process.exit(1)
 }
 
-size = parseInt(process.argv[2])
+size = parseInt(process.argv[2], 10)
 /*
     The previous code is parsing the input size as a hexadecimal number using parseInt() with a radix of 16 whereas it should be parsed as a decimal number.
 
-    I remove the radix argument from the parseInt() function call. By default, parseInt() should parse the string as a decimal number.
+    I updated the radix argument from the parseInt() function call from base 16 to base 10.
 */
 
 for (let i = 0 ; i < size ; i ++) {
