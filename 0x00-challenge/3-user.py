@@ -40,17 +40,7 @@ class User():
         if pwd is None or type(pwd) is not str:
             self.__password = None
         else:
-            """
-            password setter method was setting the hash value to a different attribute name _password instead of __password
-            Changed self._password to self.__password
-            """
             self.__password = hashlib.md5(pwd.encode()).hexdigest().lower()
-            """
-                The is_valid_password method was comparing the hashed passwords
-                in upper case while the password property is returning the hash
-                in lower case
-                Changed upper() to lower()
-            """
 
     def is_valid_password(self, pwd):
         """
