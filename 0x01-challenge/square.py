@@ -5,6 +5,7 @@ Script that defines a class named Square that represents a square shape.
 It provides methods to calculate the area and perimeter of the square.
 """
 
+
 class Square:
     width = 0
     height = 0
